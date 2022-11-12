@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans:wght@400;700&family=Oxanium:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium' cursive;
+}
+
+body {
+    text-align: center; /* centralizar os conteúdos */
+    background: linear-gradient(to bottom,#d7ffce, #4fff28); /* fazer efeito de cor na página */
+    min-height: 100vh;
+}
+
+main {
+    display: inline-block;
+    margin-top: 2%; /* margem do topo */
+    padding: 15px; /* borda laterais da imagem pra borda do site */
+    position: relative;
+}
+
+.pokedex{
+    width: 100%;
+    max-width: 425px;
+}
+
+.pokemon__image {
+    position: absolute;
+    bottom: 55%; /* altura em relação a baixo da borda */
+    left: 50%; /* espaçamento em relação á esquerda */
+    transform: translate(-63%, 20%); /* move a imagem em relação a seu próprio tamanho */
+    height: 18%; /* tamanho do pokemón, em % ajuda na responsividade */ 
+}
+
+.pokemon__data {
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 54.5%;
+    right: 27%;
+    font-size: clamp(8px, 5vw, 25px) /* esssa propriedade define o tamanho do texto/número dependendo do tamanho da tela, 3 parâmentros, min - normal - máx */;
+}
+
+.pokemon__name {
+    color: #3a444d;
+    text-transform: capitalize;
+}
+
+.form {
+    position: absolute;
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+
+.input__search {
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333; /* efeito do elemento estar pra cima, 3d */
+}
+
+.buttons {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(5px, 5vw, 1rem);
+    font-weight: 600; /* Deixa mais negrito a escrita */
+    color: white;
+    background-color: rgb(155, 153, 153);
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+.button:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
